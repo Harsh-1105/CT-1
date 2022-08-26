@@ -8,7 +8,7 @@ using namespace std;
 
 int lenoflongsubarr(int nums[],int n,int x)
 {
-    unordered_map<int, int> sub;
+    unordered_map<int, int> sub;//unordered map
     int sum = 0, max = 0;
 
     for (int i = 0; i < n; i++)
@@ -28,9 +28,10 @@ int lenoflongsubarr(int nums[],int n,int x)
             if (max < (i - sub[sum - x]))
                 max = i - sub[sum - x];
         }
+        
     }
-
-    cout<<"The Longest subarray is{} having length "<<max<<endl;
+    
+    cout<<"The Longest subarray is {} having length "<<max<<endl;
     return 0;
 }
     
@@ -38,11 +39,11 @@ int lenoflongsubarr(int nums[],int n,int x)
 
 int main() {
     int nums[]={5,6,-5,5,3,5,3,-2,0};
-    int n = sizeof(nums) / sizeof(nums[0]);
+    int n = sizeof(nums) / sizeof(nums[0]);//size of nums array
     int x = 8;
     int temp;
 
-    try
+    try//Exception Handling
     {
         temp = lenoflongsubarr(nums, n, x);
         if (!temp)
