@@ -30,7 +30,8 @@ int lenoflongsubarr(int nums[],int n,int x)
         }
     }
 
-    return max;
+    cout<<"The Longest subarray is{} having length "<<max<<endl;
+    return 0;
 }
     
 
